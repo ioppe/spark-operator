@@ -6,7 +6,7 @@ RUN apk add --no-cache git maven && \
 WORKDIR /usr/local/home/hibench
 
 RUN git clone https://github.com/Intel-bigdata/HiBench.git && \
-    ll ./ && \
+    ls ./ && \
     cd /usr/local/home/hibench/Hibench && \
     mvn -Psparkbench -Dspark=2.4 -Dscala=2.11 clean package
     
