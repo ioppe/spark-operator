@@ -7,6 +7,8 @@ WORKDIR /usr/local/home/hibench
 
 RUN git clone https://github.com/Intel-bigdata/HiBench.git && \
     ls ./ && \
-    cd /usr/local/home/hibench/Hibench && \
+    mv ./HiBench ./hibench && \
+    ls ./ && \
+    cd /usr/local/home/hibench/hibench && \
     mvn -Psparkbench -Dspark=2.4 -Dscala=2.11 clean package
     
